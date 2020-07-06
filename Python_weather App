@@ -1,0 +1,52 @@
+# Created by: Joshua J. Taylor
+# Date: May 28, 2020
+
+import requests
+import sys
+# prints results for user
+def data_print(temp2,speed2,lat2,long2,desc):
+    print('Temperature :{} degrees celsius'.format(temp2))
+    print('Wind Speed : {} m/s'.format(speed2))
+    print('Latitude : {}'.format(lat2))
+    print('Longitude : {}'.format(long2))
+    print('Description : {}'.format(desc))
+    # returns to main function
+    return
+
+# Main function
+def main():
+    # try catch statement
+    try:
+        # User Input section
+        city = input('Enter your City Name :')
+
+        # data retrieved from API and URL
+        url = 'http://api.openweathermap.org/data/2.5/weather?q={}&' \
+              'appid=_________________________________&units=metric'.format(city)
+
+        # Retrieves data from URL
+        res = requests.get(url)
+        # takes json file and displays using user input
+        data = res.json()
+        # minimal results for user
+        temp = data['main']['temp']
+        wind_speed = data['wind']['speed']
+        description = data['weather'][0]['description']
+        latitude = data['coord']['lat']
+        longitude = data['coord']['lon']
+
+    # catch if input is invalid
+    except:
+        print("Sorry this is not a city")
+        main()
+
+    # Function call to print data
+    data_print(temp,wind_speed,latitude,longitude,description)
+
+    # user input to run program again
+    A = input('Would you like to try again y/n? :')
+    if A == "y":
+        main()
+    else:
+        sys.exit('End of program')
+main()
