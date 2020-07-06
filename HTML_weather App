@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+     
+    <title> title | Weather App </title>
+</head>
+
+<body>
+
+    <!-- Side Menu -->
+    <div id="side-menu" class="grid">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="close"></i>
+        </label>
+        <div class="sidebar">
+            <a href="#"><img src="#!" width="230" alt="logo"></a>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>title</a></li>
+                <li><a href="#"><i class="fas fa-question"></i>title</a></li>
+                <li><a href="#"><i class="fas fa-lightbulb"></i>title</a></li>
+                <li><a href="#"><i class="fas fa-comments"target="_blank"></i>title</a></li>
+                <li><a href="#"><i class="fas fa-wind"></i>Weather</a></li>
+            </ul>
+            <!--social Media-->
+            <div id="checked" class="center">
+                <ul>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-squarespace"></i></a></li>
+                    <div class="text">Follow</div>
+                </ul>
+            </div>
+            <div class="bottum">
+                <p>title, Copyright &copy; 2020</p>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav id="nav-bar">
+        <div class="logo"><a href="#l"><img src="#!" alt="logo"></a></div>
+        <ul>
+            <li><a href="#">title</a></li>
+            <li><a href="#">title</a></li>
+            <li><a href="#">title</a></li>
+            <li><a href="#"target="_blank">title</a></li>
+            <li><a href="#">Weather App</a></li>
+        </ul>
+    </nav>
+    
+    
+
+    <div class="app-wrap">
+       
+        <header>
+            <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
+        </header>
+        <main>
+            <section class="location">
+                <div class="city">City, state</div>
+                <div class="date">Date 20XX</div>
+            </section>
+            <div class="current">
+                <div class="temp">15<span>&deg;c</span></div>
+                <div class="weather">Sunny</div>
+                <div class="hi-lo">5&deg;c / 24&deg;c</div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="#"></script>
+</body>
+
+</html>
